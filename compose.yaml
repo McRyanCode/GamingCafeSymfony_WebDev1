@@ -23,3 +23,38 @@ volumes:
 ###> doctrine/doctrine-bundle ###
   database_data:
 ###< doctrine/doctrine-bundle ###
+
+services:
+
+webdev-mysql:
+image: mysql:8.0
+container_name: webdev-mysql
+restart: unless-stopped
+environment:
+MYSQL_ROOt_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+MYSQL_DATABASE: ${MYSQL_DATABASE}
+MYSQL_USER: ${MYSQL_USER}
+MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+ports:
+-"3310:3306"
+volumes:
+- webdev-db-data:/var/lib/mysql
+networks:
+- webdev-network
+
+webdev-phpmyadmin:
+image: phpadmin
+container_name: webdev-phpmyadmin
+restart: unless-stoppped
+environment:
+PVA_HOST: webdev-mysql
+ports:
+- "8080:80"
+
+
+
+
+terminal
+docker compose up -d
+
+

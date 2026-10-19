@@ -1,0 +1,28 @@
+{# templates/admin/layout.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Gamora Admin{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('index.css') }}">
+</head>
+<body>
+
+    {# Fixed Left Sidebar #}
+    {% include 'admin/partials/_sidebar.html.twig' %}
+
+    {# Main Content Wrapper #}
+    <div class="main-wrapper">
+        
+        {# Top Navigation Bar #}
+        {% include 'admin/partials/_topbar.html.twig' %}
+
+        {# Dynamic Content Block #}
+        <div class="content">
+            {% block body %}{% endblock %}
+        </div>
+
+    </div>
+
+</body>
+</html>

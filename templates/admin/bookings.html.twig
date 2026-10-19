@@ -1,0 +1,53 @@
+{# templates/admin/bookings.html.twig #}
+{% extends 'admin/layout.html.twig' %}
+
+{% block title %}Booking Management | Gamora Admin{% endblock %}
+
+{% block body %}
+<h2 style="color: white; margin-bottom: 20px; font-size: 22px; font-weight: 600;">Booking Management</h2>
+    <div class="card">
+    
+        <h2>Live Reservations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Device</th>
+                    <th>Tier</th>
+                    <th>Reserved At</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#52</td>
+                    <td><strong>@user1</strong></td>
+                    <td>PC (2h)</td>
+                    <td>BASIC</td>
+                    <td>
+                        <span style="color: var(--accent); font-weight: 600;">Sep 16, 2026</span><br>
+                        <small style="color: #64748b;">07:50 PM</small>
+                    </td>
+                    <td>
+                        <span style="color: #f59e0b; font-weight: 600;">Pending</span><br>
+                        <small style="color: #64748b;">(Cash at Counter)</small>
+                    </td>
+                    <td>
+                        <select style="background: #0b0f19; border: 1px solid #1e293b; color: white; padding: 6px 10px; border-radius: 6px;">
+                            <option value="Completed" selected>Completed</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button class="btn btn-save">Update</button>
+                        <button class="btn btn-del">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

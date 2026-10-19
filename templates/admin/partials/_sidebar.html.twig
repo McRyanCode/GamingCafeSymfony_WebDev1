@@ -1,0 +1,32 @@
+{# templates/admin/partials/_sidebar.html.twig #}
+<aside>
+    <div class="sidebar-logo">
+        <img src="{{ asset('images/Logo.png') }}" alt="Gamora Logo" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    </div>
+    <div class="sidebar-menu">
+        {# Exit / Back to Main Site Button #}
+        <a href="/" class="sidebar-item" title="Exit to Main Site">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+        
+        {# Dashboard Overview #}
+        <a href="{{ path('admin_dashboard') }}" class="sidebar-item {{ app.request.attributes.get('_route') == 'admin_dashboard' ? 'active' : '' }}" title="Dashboard Overview">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+        </a>
+        
+        {# Customer Management #}
+        <a href="{{ path('admin_customers') }}" class="sidebar-item {{ app.request.attributes.get('_route') == 'admin_customers' ? 'active' : '' }}" title="Customer Management">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </a>
+
+        {# Booking Management #}
+        <a href="{{ path('admin_bookings') }}" class="sidebar-item {{ app.request.attributes.get('_route') == 'admin_bookings' ? 'active' : '' }}" title="Booking Management">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        </a>
+
+        {# Station Monitoring #}
+        <a href="{{ path('admin_stations') }}" class="sidebar-item {{ app.request.attributes.get('_route') == 'admin_stations' ? 'active' : '' }}" title="Station Monitoring">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+        </a>
+    </div>
+</aside>

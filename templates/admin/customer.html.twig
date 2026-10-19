@@ -1,0 +1,48 @@
+{# templates/admin/Customer.html.twig #}
+{% extends 'admin/layout.html.twig' %}
+
+{% block title %}Customer Management | Gamora Admin{% endblock %}
+
+{% block body %}
+    <h2 style="color: white; margin-bottom: 20px; font-size: 22px; font-weight: 600;">Customer Management</h2>
+
+    <div class="card">
+        <h2>Registered Accounts & Live Design Preview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Device</th>
+                    <th>Tier</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1</td>
+                    <td><strong>@player_one</strong></td>
+                    <td>PC Station 01 (2h)</td>
+                    <td>VIP Gamer</td>
+                    <td><span style="color: #00f5d4; font-weight: 600;">Confirmed</span></td>
+                    <td>
+                        <button class="btn btn-save">Update</button>
+                        <button class="btn btn-del">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#2</td>
+                    <td><strong>@gamer_girl</strong></td>
+                    <td>PS5 Lounge (3h)</td>
+                    <td>Standard</td>
+                    <td><span style="color: #f59e0b; font-weight: 600;">Pending</span></td>
+                    <td>
+                        <button class="btn btn-save">Update</button>
+                        <button class="btn btn-del">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

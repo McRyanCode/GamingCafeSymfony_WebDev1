@@ -1,0 +1,183 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Gamora's Gaming Cafe{% endblock %}
+
+{% block body %}
+
+<header class="site-header">
+    <div class="nav-container">
+        <a href="{{ path('app_home') }}" class="logo">
+            <span class="logo-icon">G</span>
+            <span>GAMORA<span class="logo-accent">'S</span></span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="#home">Home</a>
+            <a href="#why-us">Why Choose Us</a>
+            <a href="#games">Games</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline" type="button">Sign In</button>
+            <button class="btn btn-primary" type="button">Sign Up</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-label">YOUR NEXT LEVEL STARTS HERE</p>
+
+            <h1>
+                WHERE<br>
+                <span>CHAMPIONS</span><br>
+                ARE BORN
+            </h1>
+
+            <p class="hero-description">
+                Play your favorite games, challenge your friends,
+                and experience gaming like never before.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary">BOOK NOW</a>
+                <a href="#games" class="btn btn-outline">VIEW GAMES</a>
+            </div>
+        </div>
+
+        {#<div class="hero-badge">
+            <span class="badge-number">GG</span>
+            <span>GAMING STARTS HERE</span>
+        </div>#}
+    </section>
+
+
+<section class="why-us" id="why-us">
+    <div class="section-heading">
+        <p class="section-label">WHY CHOOSE US?</p>
+        <h2>LEVEL UP YOUR <span>GAMING</span></h2>
+        <p class="section-description">
+            More than just a place to play. It's where gamers come together.
+        </p>
+    </div>
+
+    <div class="features-grid">
+        <article class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3>Premium Gaming</h3>
+            <p>Enjoy an exciting gaming experience in a comfortable setup.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Performance</h3>
+            <p>Play your favorite games with smooth performance and responsive controls.</p>
+        </article>
+
+        <article class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Gaming Community</h3>
+            <p>Meet other players, challenge your friends, and join gaming events.</p>
+        </article>
+    </div>
+</section>
+
+
+<section class="featured-games" id="games">
+    <div class="games-heading">
+        <div>
+            <p class="section-label">PICK YOUR NEXT ADVENTURE</p>
+            <h2>FEATURED <span>GAMES</span></h2>
+            <p class="games-description">
+                Jump into the games you love and play with your friends.
+            </p>
+        </div>
+
+        <div class="carousel-controls">
+            <button type="button" id="scrollLeft" aria-label="Previous games">
+                &#8592;
+            </button>
+            <button type="button" id="scrollRight" aria-label="Next games">
+                &#8594;
+            </button>
+        </div>
+    </div>
+
+    <div class="games-carousel" id="gamesCarousel">
+        <article class="game-card">
+            <div class="game-image game-image-one">
+                <span class="game-tag">ACTION</span>
+                <span class="game-placeholder">n 01</span>
+            </div>
+            <div class="game-info">
+                <h3>Action Arena</h3>
+                <p>Fast-paced action</p>
+            </div>
+        </article>
+
+        <article class="game-card">
+            <div class="game-image game-image-two">
+                <span class="game-tag">ADVENTURE</span>
+                <span class="game-placeholder">GAME 02</span>
+            </div>
+            <div class="game-info">
+                <h3>Fantasy Quest</h3>
+                <p>Explore a new world</p>
+            </div>
+        </article>
+
+        <article class="game-card">
+            <div class="game-image game-image-three">
+                <span class="game-tag">SPORTS</span>
+                <span class="game-placeholder">GAME 03</span>
+            </div>
+            <div class="game-info">
+                <h3>Ultimate Sports</h3>
+                <p>Compete with friends</p>
+            </div>
+        </article>
+
+        <article class="game-card">
+            <div class="game-image game-image-four">
+                <span class="game-tag">RACING</span>
+                <span class="game-placeholder">GAME 04</span>
+            </div>
+            <div class="game-info">
+                <h3>Turbo Racing</h3>
+                <p>Race to the finish</p>
+            </div>
+        </article>
+
+        <article class="game-card">
+            <div class="game-image game-image-five">
+                <span class="game-tag">STRATEGY</span>
+                <span class="game-placeholder">GAME 05</span>
+            </div>
+            <div class="game-info">
+                <h3>Battle Tactics</h3>
+                <p>Plan your next move</p>
+            </div>
+        </article>
+
+        <article class="game-card">
+            <div class="game-image game-image-six">
+                <span class="game-tag">CO-OP</span>
+                <span class="game-placeholder">GAME 06</span>
+            </div>
+            <div class="game-info">
+                <h3>Team Adventure</h3>
+                <p>Play together</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+</main>
+
+{% endblock %}

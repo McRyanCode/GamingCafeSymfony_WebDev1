@@ -1,0 +1,46 @@
+{# templates/admin/stations.html.twig #}
+{% extends 'admin/layout.html.twig' %}
+
+{% block title %}Station Monitoring | Gamora Admin{% endblock %}
+
+{% block body %}
+<h2 style="color: white; margin-bottom: 20px; font-size: 22px; font-weight: 600;">Station Monitoring</h2>
+    <div class="card">
+        <h2>Gaming Terminal Rigs</h2>
+        <p style="color: #94a3b8; margin-bottom: 20px;">Real-time hardware status and active user sessions.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Station ID</th>
+                    <th>Rig Spec</th>
+                    <th>Current User</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>PC Station 01</strong></td>
+                    <td>RTX 4080 / i9-13900K</td>
+                    <td>@player_one</td>
+                    <td><span style="color: #10b981; font-weight: 600;">Active (2h left)</span></td>
+                    <td>
+                        <button class="btn btn-save">Reboot</button>
+                        <button class="btn btn-del">Lock</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>PS5 Lounge 01</strong></td>
+                    <td>PlayStation 5 Pro</td>
+                    <td>@gamer_girl</td>
+                    <td><span style="color: #f59e0b; font-weight: 600;">Idle / Ready</span></td>
+                    <td>
+                        <button class="btn btn-save">Activate</button>
+                        <button class="btn btn-del">Maintenance</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
